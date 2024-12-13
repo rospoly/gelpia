@@ -304,10 +304,10 @@ def main(argv):
         print("Maximum input {}".format(domain))
         print("Solver calls {}".format(solver_calls))
     else:
-        manager = Manager()
+        manager = [] #Manager()
         max_lower = Value("d", float("nan"))
         max_upper = Value("d", float("nan"))
-        max_domain = manager.dict()
+        max_domain = [] #manager.dict()
         max_solver_calls = Value("i", 0)
         p = Process(target=find_max, args=(args.function,
                                            (args.input_epsilon,
